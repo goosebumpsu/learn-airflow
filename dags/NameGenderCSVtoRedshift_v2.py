@@ -11,8 +11,8 @@ import psycopg2
 
 def get_Redshift_connection():
     host = "learnde.cduaw970ssvt.ap-northeast-2.redshift.amazonaws.com"
-    redshift_user = "keeyong"  # 본인 ID 사용
-    redshift_pass = "..."  # 본인 Password 사용
+    redshift_user = "pbs40130417"  # 본인 ID 사용
+    redshift_pass = "Pbs401304171!"  # 본인 Password 사용
     port = 5439
     dbname = "dev"
     conn = psycopg2.connect(f"dbname={dbname} user={redshift_user} host={host} password={redshift_pass} port={port}")
@@ -47,7 +47,7 @@ def load(records):
       ...
     ]
     """
-    schema = "keeyong"
+    schema = "pbs40130417"
     # BEGIN과 END를 사용해서 SQL 결과를 트랜잭션으로 만들어주는 것이 좋음
     cur = get_Redshift_connection()
     try:
